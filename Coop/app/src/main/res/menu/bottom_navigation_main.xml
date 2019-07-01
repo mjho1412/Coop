@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:checked="true"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar_black"
+        android:title="Lịch"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_graph"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_graph_black"
+        android:title="Thống kê"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_map"
+        android:checked="false"
+        android:enabled="true"
+        android:icon="@drawable/ic_map_black"
+        android:title="Bản Đồ"
+        app:showAsAction="ifRoom" />
+</menu>

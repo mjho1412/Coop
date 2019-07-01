@@ -1,0 +1,437 @@
+syntax = "proto2";
+
+package minerva;
+
+message Message {
+    required int32 code = 1;
+    required int32 type = 2;
+    optional bytes message_data = 3;
+}
+
+message DriverInfo{
+    required int32 driverId = 1;
+    optional string first_name = 2;
+    optional string last_name = 3;
+    optional string address = 4;
+    optional string mobile = 5;
+    optional string avatar = 6;
+    optional string birthday = 7;
+    optional string email = 8;
+    optional float rated = 9;
+}
+
+message CustomerInfo{
+    required int32 customerId = 1;
+    optional string first_name = 2;
+    optional string last_name = 3;
+    optional string address = 4;
+    optional string mobile = 5;
+    optional string avatar = 6;
+    optional string birthday = 7;
+    optional string email = 8;
+    optional float rated = 9;
+}
+
+message CabInfo{
+    required int32 cabId = 1;
+    optional string number_plate = 2;
+    optional string color = 3;
+    optional string model = 4;
+    optional string manufacture = 5;
+    optional DriverInfo driver = 6;
+}
+
+message PayInfo{
+    optional string full_length = 1;
+    optional string price = 2;
+    optional string payment = 3;
+    optional string datetime = 4;
+}
+/* GIS */
+message Point{
+    required float longitude = 1;
+    required float latitude = 2;
+    optional float atitude = 3;
+    optional float direction = 4;
+    optional string address = 5;
+    optional string icon = 6;
+}
+
+message Address{
+    required float longitude = 1;
+    required float latitude = 2;
+    required string address = 3;
+}
+
+/* REQEUST */
+message ReqLogin{
+    required string username = 1;
+    required string password = 2;
+    required string device = 3;
+    required string platformType = 4;
+    required string platformVersion = 5;
+    required string version = 6;
+    optional string device_token = 7;
+}
+
+message ReqLogout{
+    required int32 userId = 1;
+}
+
+message ReqWhatHere{
+    required Point location = 1;
+    optional int32 userId = 2;
+}
+
+message ReqSearch{
+    required Point location = 1;
+    required string keyword = 2;
+    required int32 page = 3;
+    optional int32 userId = 4;
+}
+
+message ReqDistance{
+    repeated Point sources = 1;
+    repeated Point destinations = 2;
+    optional int32 transportType = 3;
+    optional int32 alleyAvoidance = 4;
+    optional int32 userId = 5;
+}
+
+message ReqRoute{
+    repeated Point locations = 1;
+    optional int32 transportType = 2;
+    optional int32 alleyAvoidance = 3;
+    optional int32 userId = 4;
+}
+
+/* LOCATION */
+message ReqLocationCabs{
+    required Point location = 1;
+    required int32 business_id = 2;
+}
+
+message ReqLocationRider{
+    required int32 riderId = 1;
+}
+
+message ReqLocationDriver{
+    required int32 cabId = 1;
+}
+
+message ReqChangeStatus{
+    required int32 status = 1;
+    required int32 cabId = 2;
+}
+
+/* KICK */
+message ResKick{
+    required int32 status = 1;
+    required string description = 2;
+}
+
+/* INFO */
+message ReqSummery{
+    required int32 driveId = 1;
+}
+
+message ResSummeryToDay{
+    required int32 status = 1;
+    required int32 trips = 2;
+    required float earning = 3;
+    required float online = 4;
+    required float avg_ratings = 5;
+}
+
+message ResSummeryRate{
+    required int32 status = 1;
+    required int32 total_trips = 2;
+    required int32 total_rated = 3;
+    required int32 rate1 = 4;
+    required int32 rate2 = 5;
+    required int32 rate3 = 6;
+    required int32 rate4 = 7;
+    required int32 rate5 = 8;
+}
+
+message Earning{
+    required float earning = 1;
+    required string description = 2;
+}
+
+message ResSummeryEarning{
+    required int32 status = 1;
+    required float total_earning = 2;
+    required float avg_earning = 3;
+    repeated Earning summery = 4;
+}
+
+/* DriverInfo */
+message ReqDriverInfo{
+    required int32 driverId = 1;
+}
+
+message ResDriverInfo{
+    required int32 status = 1;
+    required int32 driverId = 2;
+    optional int32 business_id = 3;
+    optional string description = 4;
+}
+
+message ExpressInfo{
+    optional string fullname = 1;
+    optional string mobile = 2;
+    optional string address = 3;
+}
+
+/* RIDE */
+message ReqRide{
+    required int32 customerId = 1;
+    required int32 business_type_id = 2;
+    repeated Address addresses = 3;
+    required int32 customer_user_request_id = 4;
+    optional PayInfo payInfo = 5;
+    optional int32 driverId = 6;
+    optional string description = 7;
+    optional ExpressInfo express = 8;
+}
+
+message ReqRideCancel{
+    required int32 customerId = 1;
+}
+
+message ReqRideCab{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    optional int32 cabId = 3;
+    optional Point point = 4;
+    optional float distance = 5;
+    optional int32 timer = 6;
+    optional int32 total_timer = 7;
+    optional PayInfo payInfo = 8;
+    optional CustomerInfo customerInfo = 9;
+    repeated Address addresses = 10;
+    optional string transport = 11;
+}
+
+message ReqRideCabRoute{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    repeated Address addresses = 3;
+    optional float distance = 4;
+    optional string routes = 5;
+    optional PayInfo payInfo = 6;
+    optional CustomerInfo customerInfo = 7;
+    optional CabInfo cabInfo = 8;
+    optional int32 bussinessId = 9;
+    optional string bussinessIcon = 10;
+    optional Point locationRider = 11;
+    optional Point locationDriver = 12;
+    optional string description = 13;
+    optional string title = 14;
+    optional ExpressInfo express = 15;
+    optional string note = 16;
+    optional string transport = 17;
+}
+
+message ReqRideCabRoutePickUp{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    optional string description = 3;
+    optional string title = 4;
+}
+
+message ReqRideCabRouteStart{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    optional string description = 3;
+    optional string title = 4;
+}
+
+message ReqRideCabRouteFinish{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    optional string description = 3;
+    optional string title = 4;
+}
+
+message ReqRideCabRouteCancel{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    required int32 reason_id = 3;
+    optional string reason_content = 4;
+}
+
+message ReqRideCabRouteRateCustomer{
+    required int32 rideId = 1;
+    required int32 rate = 2;
+    required string price = 3;
+    required string datetime = 4;
+    optional FeeInfo feeInfo = 5;
+    optional CustomerInfo customerInfo = 6;
+    optional string description = 7;
+}
+
+message ReqRideCabRouteRateCab{
+    required int32 rideId = 1;
+    required int32 rate = 2;
+    required string price = 3;
+    required string datetime = 4;
+    optional FeeInfo feeInfo = 5;
+    optional DriverInfo driverInfo = 6;
+    optional string description = 7;
+}
+
+/* CHAT */
+message ChatUser{
+    required int32 userId = 1;
+    required int32 userType = 2;
+    optional string first_name = 3;
+    optional string last_name = 4;
+    optional string avatar = 5;
+    optional string mobile = 6;
+    optional float rated = 7;
+}
+
+message ChatContent{
+    required int32 rideId = 1;
+    required ChatUser user = 2;
+    required string messageContent = 3;
+    required int32 messageType = 4;
+    required string datetime = 5;
+}
+
+message ResChatMessage{
+    required int32 status = 1;
+}
+
+message ResLoginRoom{
+    required int32 status = 1;
+    required int32 rideId = 2;
+    repeated ChatContent messages = 3;
+    repeated ChatUser users = 4;
+}
+
+message ResLogoutRoom{
+    required int32 status = 1;
+}
+
+message ReqLoginRoom{
+    required int32 rideId = 1;
+    required ChatUser user = 2;
+}
+
+message ReqLogoutRoom{
+    required int32 rideId = 1;
+    required ChatUser user = 2;
+}
+
+/* SOCKET */
+message ReqSocketCheck{
+    required int32 status = 1;
+}
+
+/* FEE */
+message PriceInfo{
+    required string name = 1;
+    required string desc = 2;
+    required string value = 3;
+}
+
+message FeeInfo{
+    required int32 business_id = 1;
+    required string business_name = 2;
+    required string image = 3;
+    required string fee = 4;
+    required string promotion_id = 5;
+    required string promotion_code = 6;
+    repeated PriceInfo details = 7;
+    required string distance = 8;
+}
+
+/* RESPONSE */
+message ResResume{
+    required int32 status = 1;
+}
+
+message ResDriver{
+    required int32 status = 1;
+    optional string description = 2;
+    optional int32 userId = 3;
+    repeated CabInfo cabs = 4;
+}
+
+message ResLogin{
+    required int32 status = 1;
+    optional string description = 2;
+    optional Message resume = 3;
+}
+
+message ResLoginCab{
+    required int32 status = 1;
+    optional string description = 2;
+    optional Message resume = 3;
+}
+
+message ResLoginCustomer{
+    required int32 status = 1;
+    optional string description = 2;
+    optional Message resume = 3;
+}
+
+message ResAPI{
+    required int32 status = 1;
+    optional string value = 2;
+    optional string description = 3;
+}
+
+/* LOCATION */
+message ResLocationCabs{
+    required int32 status = 1;
+    required int32 business_id = 2;
+    repeated Point cabs = 3;
+    required string icon = 4;
+}
+
+message ResLocationRider{
+    required int32 status = 1;
+    optional int32 riderId = 2;
+    required Point location = 3;
+}
+
+message ResLocationDriver{
+    required int32 status = 1;
+    optional int32 cabId = 2;
+    required Point location = 3;
+}
+
+message ResRideCabRouteCancel{
+    required int32 rideId = 1;
+    required int32 status = 2;
+    required int32 reason_id = 3;
+    required string reason_content = 4;
+    optional CustomerInfo customerInfo = 5;
+    optional CabInfo cabInfo = 6;
+}
+
+message ResRideCancel{
+    required int32 customerId = 1;
+    required int32 status = 2;
+    optional string description = 3;
+}
+
+/* CURRENT */
+message GPS {
+    required int32 userId = 1;
+    required Point location = 2;
+    optional float altitude = 3;
+    optional float direction = 4;
+}
+
+message DeviceInfo{
+    required int32 userId = 1;
+    required string platformType = 2;
+    required string platformVersion = 3;
+    required string version = 4;
+    optional string device_token = 5;
+}

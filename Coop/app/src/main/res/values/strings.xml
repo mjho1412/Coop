@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">COOP</string>
+
+    <string name="default_notification_channel_id">10001</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <!--Menu-->
+    <string name="action_settings">Settings</string>
+    <string name="action_maplayer">Lớp bản đồ</string>
+    <string name="action_search">Tìm kiếm</string>
+    <string name="action_chat">Chat</string>
+    <string name="action_notification">Notification</string>
+    <string name="action_list_scanned">List Scanned</string>
+    <string name="action_clear_data">Clear Data</string>
+
+    <!--Action-->
+
+
+    <string name="title_logo"> </string>
+    <string name="title_copyright">© 2012 Bản quyền của Liên hiệp HTX Thương Mại\nTp. Hồ Chí Minh</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="hint_username">Tài khoản</string>
+    <string name="helper_username">Nhập tên tài khoản của bạn</string>
+    <string name="helper_password">Nhập mật khẩu của bạn</string>
+    <string name="button_forget_password">Quên mật khẩu?</string>
+    <string name="button_login">Đăng Nhập</string>
+    <string name="msg_text_empty">Không được để trống</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone">Số điện thoại</string>
+    <string name="hint_address">Địa chỉ</string>
+    <string name="hint_search">Tìm kiếm</string>
+    <string name="district">Quận/Huyện</string>
+    <string name="ward">Phường/Xã</string>
+    <string name="system">Hệ Thống</string>
+    <string name="logout">Đăng Xuất</string>
+    <string name="news">Tin tức</string>
+    <string name="geometry">ĐỊA LÝ</string>
+    <string name="manager">QUẢN LÝ</string>
+    <string name="account">Tài khoản</string>
+    <string name="tab_contact">Liên hệ</string>
+    <string name="tab_accreditation">Kiểm định</string>
+    <string name="tab_map">Bản đồ</string>
+    <string name="tab_device">Thiết bị</string>
+    <string name="about">Liên hệ</string>
+    <string name="statistical">Thống kê</string>
+
+    <string name="done">Done</string>
+    <string name="cab_title_x">Selection (%1$d)</string>
+    <string name="basket_title_selected">Sọt hàng (%1$d)</string>
+
+    <string-array name="weeks_day">
+        <item>Th.2</item>
+        <item>Th.3</item>
+        <item>Th.4</item>
+        <item>Th.5</item>
+        <item>Th.6</item>
+        <item>Th.7</item>
+        <item>CN</item>
+    </string-array>
+
+    <!--Demo-->
+    <string name="title_main">Test</string>
+    <string name="detail_caption_status">Status</string>
+    <string name="detail_caption_date">Date</string>
+    <string name="detail_caption_amount">Amount</string>
+    <string name="action_back">Back</string>
+
+</resources>

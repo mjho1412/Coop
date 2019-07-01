@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_navigate_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha=".9"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp">
+
+            <TextSwitcher
+                android:id="@+id/text_switcher_navigate_script"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/app_name"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/black" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider_transparent_tini"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="16dp"
+            android:showDividers="middle">
+
+            <ImageSwitcher
+                android:id="@+id/image_switcher_navigate_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextSwitcher
+                android:id="@+id/text_switcher_navigate_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="?android:attr/colorPrimary"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/button_navigate_prev"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#11ff0000" />
+
+        <View
+            android:id="@+id/button_navigate_next"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="#110000ff" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,2 @@
+com.hb.coop.app.App:init
+com.hb.coop.utils.AppOTP:generate

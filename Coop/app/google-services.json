@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "539631968022",
+    "firebase_url": "https://coop-42090.firebaseio.com",
+    "project_id": "coop-42090",
+    "storage_bucket": "coop-42090.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539631968022:android:0ea221585ab63044",
+        "android_client_info": {
+          "package_name": "com.hb.coop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539631968022-k6muj8ij7v9s395r44rpo04ijklm4qf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMdCVkKA0yoVdUppAPt4e-5pS3pMP7DC4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

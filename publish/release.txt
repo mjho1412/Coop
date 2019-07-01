@@ -1,0 +1,25 @@
+Alias name: aber
+Creation date: Aug 10, 2018
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Aber, OU=Aber, O=Aber, L=HCM, ST=HCM, C=08
+Issuer: CN=Aber, OU=Aber, O=Aber, L=HCM, ST=HCM, C=08
+Serial number: 6b827047
+Valid from: Fri Aug 10 09:29:25 ICT 2018 until: Tue Aug 04 09:29:25 ICT 2043
+Certificate fingerprints:
+	 MD5:  6D:3A:8D:F3:0E:3C:EA:98:C8:BC:B4:B5:21:48:78:B1
+	 SHA1: 7D:FB:B1:B1:B0:4D:51:31:B6:12:F0:DF:3A:F1:BD:ED:A6:2D:63:D9
+	 SHA256: DA:9F:8C:34:A5:3B:23:AD:04:B0:20:EE:AE:41:F3:87:4A:E8:90:EF:65:54:84:C5:EC:95:14:1A:60:2E:B3:8D
+	 Signature algorithm name: SHA256withRSA
+	 Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: AA 7B 48 CD 63 62 37 AC   16 09 40 F4 98 9A 04 5A  ..H.cb7...@....Z
+0010: A7 4C C5 3A                                        .L.:
+]
+]

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendar_view_by_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_allowClickDaysOutsideCurrentMonth="true"
+        app:mcv_arrowColor="@color/white"
+        app:mcv_calendarMode="week"
+        app:mcv_dateTextAppearance="@style/CalendarTextAppearance"
+        app:mcv_firstDayOfWeek="sunday"
+        app:mcv_headerTextAppearance="@style/CalendarTextAppearance"
+        app:mcv_selectionMode="single"
+        app:mcv_showOtherDates="all"
+        app:mcv_tileHeight="40dp"
+        app:mcv_weekDayLabels="@array/weeks_day" />
+
+    <!--app:mcv_arrowColor="@color/white"-->
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendar_view_by_month"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:mcv_allowClickDaysOutsideCurrentMonth="true"
+        app:mcv_arrowColor="#ffffffff"
+        app:mcv_calendarMode="month"
+        app:mcv_dateTextAppearance="@style/CalendarTextAppearance"
+        app:mcv_firstDayOfWeek="sunday"
+        app:mcv_headerTextAppearance="@style/CalendarTextAppearance"
+        app:mcv_selectionMode="single"
+        app:mcv_showOtherDates="all"
+        app:mcv_tileHeight="40dp"
+        app:mcv_weekDayLabels="@array/weeks_day" />
+
+    <TextView
+        android:id="@+id/text_day_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:drawableStart="@drawable/ic_expand_more_x"
+        android:drawableEnd="@drawable/ic_expand_more_x"
+        android:drawablePadding="32dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        tools:text="@tools:sample/date/mmddyy" />
+
+</LinearLayout>

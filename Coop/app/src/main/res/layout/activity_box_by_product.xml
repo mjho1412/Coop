@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/details_toolbar_container_height"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="top"
+            android:alpha="0"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/MyToolbarTextAppearance"
+            tools:alpha="1" />
+
+        <ViewStub
+            android:id="@+id/cab_stub"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="0dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/details_card"
+        layout="@layout/item_view_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_normal"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="@dimen/space_normal"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+    <!--android:id="@+id/recycler_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:clipToPadding="false"-->
+    <!--android:layoutAnimation="@anim/layout_animation_fall_down"-->
+    <!--android:overScrollMode="never"-->
+    <!--android:paddingStart="@dimen/padding_small"-->
+    <!--android:paddingTop="@dimen/padding_small"-->
+    <!--android:paddingEnd="@dimen/padding_small"-->
+    <!--app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/details_card"-->
+    <!--tools:itemCount="14"-->
+    <!--tools:listitem="@android:layout/simple_list_item_1" />-->
+
+    <include
+        layout="@layout/view_lce_swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_card" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+
+    <com.hb.uiwidget.viewpager.ExtendedViewPager
+        android:id="@+id/viewpager_view_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.github.florent37.shapeofview.shapes.CircleView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="-24dp"
+        android:layout_marginEnd="-24dp"
+        android:src="@drawable/ic_close_black_24dp"
+        app:fabSize="normal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_close"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorAccent"
+            android:padding="16dp"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            app:tint="@color/white" />
+
+    </com.github.florent37.shapeofview.shapes.CircleView>
+
+</FrameLayout>

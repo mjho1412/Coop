@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item android:title="@string/manager">
+        <menu>
+
+        </menu>
+    </item>
+
+    <item android:title="@string/geometry">
+        <menu>
+            <item
+                android:id="@+id/nav_statistical"
+                android:icon="@drawable/ic_graph_black"
+                android:title="@string/statistical" />
+            <item
+                android:id="@+id/nav_district"
+                android:title="@string/district" />
+            <item
+                android:id="@+id/nav_ward"
+                android:title="@string/ward" />
+        </menu>
+    </item>
+
+    <item android:title="@string/news">
+        <menu>
+            <item
+                android:id="@+id/nav_news"
+                android:title="@string/news" />
+            <item
+                android:id="@+id/nav_about"
+                android:title="@string/about" />
+
+
+        </menu>
+    </item>
+
+    <item android:title="@string/system">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:title="@string/logout" />
+
+        </menu>
+    </item>
+
+</menu>

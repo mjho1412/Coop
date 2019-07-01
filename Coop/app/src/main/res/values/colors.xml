@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--003c8f-->
+    <color name="colorPrimary">#1565c0</color>
+    <color name="colorPrimaryDark">#1565c0</color>
+    <color name="colorAccent">#D92E27</color>
+    <!--008dff-->
+
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="grey">#767676</color>
+
+    <color name="color_normal">#000</color>
+    <color name="color_selected">#fff</color>
+    <color name="foreground_selected">#B30088FF</color>
+
+    <color name="actionbar_opacity">#33000000</color>
+
+    <color name="bkg_badge">@color/colorAccent</color>
+
+    <color name="primary_text">#000</color>
+    <color name="secondary_text">#ccc</color>
+
+    <color name="fill_default">#FFEDA0</color>
+    <color name="fill_04">#FFEDA0</color>
+    <color name="fill_08">#FED976</color>
+    <color name="fill_12">#FEB24C</color>
+    <color name="fill_16">#FD8D3C</color>
+    <color name="fill_20">#FC4E2A</color>
+    <color name="fill_24">#E31A1C</color>
+    <color name="fill_28">#BD0026</color>
+    <color name="fill_32">#800026</color>
+
+    <color name="color_negative">@color/colorAccent</color>
+    <color name="color_positive">@color/colorPrimary</color>
+
+    <color name="toolbar_background">@color/colorPrimary</color>
+
+    <color name="color_disabled">#505a595b</color>
+
+    <color name="title_text_color">#4d4d4d</color>
+    <color name="text_color_light">#eee</color>
+    <color name="window_background">@color/white</color>
+
+    <color name="transparent">#0000</color>
+    <color name="red">#D92E27</color>
+</resources>
